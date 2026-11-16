@@ -1500,15 +1500,6 @@ new MutationObserver(function(){if(!open())stop();else{played=false;n=0}}).obser
 #drawings .dw-flow{display:block;direction:ltr;text-align:left;margin-top:4px;padding:6px 10px;border-radius:8px;background:rgba(47,107,255,.07);font:700 15px/1.6 var(--hand);color:var(--ink-deep)}
 #dw-lb{position:fixed;inset:0;z-index:40000;display:none;align-items:center;justify-content:center;background:rgba(14,24,60,.93);padding:max(16px,env(safe-area-inset-top,0px)) 16px 16px;cursor:zoom-out;touch-action:none}#dw-lb .in .dw-svg{transform-origin:0 0;will-change:transform;touch-action:none;-webkit-user-select:none;user-select:none}#dw-lb .in{cursor:grab}
 #dw-lb.open{display:flex}
-#dw-lb .in{max-height:calc(100vh - 140px);max-height:calc(100dvh - 140px)}
-#dw-lb .in .dw-svg,#dw-lb .in .dw-svg.wide,#dw-lb .in .dw-svg.wide2{max-height:calc(100vh - 144px);max-height:calc(100dvh - 144px)}
-#dw-lb .zt{position:fixed;left:50%;bottom:max(16px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:2;display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(255,247,230,.97);box-shadow:0 4px 18px rgba(0,0,0,.45);direction:ltr;cursor:default;touch-action:manipulation}
-#dw-lb .zt button{position:static;width:44px;height:44px;border-radius:50%;border:2px solid var(--wood2,#6b4a2b);background:#fff;color:var(--wood2,#6b4a2b);font:700 26px/1 var(--hand,sans-serif);display:grid;place-items:center;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
-#dw-lb .zt button:hover:not(:disabled){background:#ffe9cf}
-#dw-lb .zt button:active:not(:disabled){transform:scale(.94)}
-#dw-lb .zt button:disabled{opacity:.35;cursor:default}
-#dw-lb .zt .zr{font-size:20px}
-#dw-lb .zt .zl{min-width:58px;text-align:center;font:800 16px/1 var(--hand,sans-serif);color:var(--wood2,#6b4a2b);user-select:none;-webkit-user-select:none}
 #dw-lb .in{width:min(96vw,1300px);max-height:92vh;overflow:hidden;touch-action:none;position:relative;background:#fff;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
 #dw-lb .in .dw-svg,#dw-lb .in .dw-svg.wide,#dw-lb .in .dw-svg.wide2{min-width:0;width:100%;height:auto;max-height:90vh}
 #dw-lb .in .dw-svg.tall{width:auto;max-width:100%;margin:0 auto}
@@ -1540,17 +1531,17 @@ new MutationObserver(function(){if(!open())stop();else{played=false;n=0}}).obser
 </div>
 <div class="sig"><span><span class="lt">eng mahmoud mohamed</span></span><small><span class="lt">Coding Create</span> · <span class="lt">Code. Create. Inspire.</span></small></div>
 </article>
-<div id="dw-lb" role="dialog" aria-label="تكبير الرسمة"><button type="button" aria-label="إغلاق">✕</button><div class="in"></div><div class="zt" role="group" aria-label="التحكم في التكبير"><button type="button" data-z="out" aria-label="تصغير" title="تصغير (-)">−</button><span class="zl" aria-live="polite">100%</span><button type="button" data-z="in" aria-label="تكبير" title="تكبير (+)">+</button><button type="button" data-z="reset" class="zr" aria-label="إعادة الضبط" title="إعادة الضبط (0)">⟲</button></div></div>
+<div id="dw-lb" role="dialog" aria-label="تكبير الرسمة"><button type="button" aria-label="إغلاق">✕</button><div class="in"></div></div>
 <script>
 (function(){
 var lb=document.getElementById('dw-lb');if(!lb)return;var inn=lb.querySelector('.in'),xb=lb.querySelector('button');
-var sc=1,tx=0,ty=0,cur=null,P={},pd=0,pm=null,lastTap=0,bw=1,bh=1,bx=0,by=0,zl=lb.querySelector('.zl'),zbo=lb.querySelector('[data-z=out]'),zbi=lb.querySelector('[data-z=in]'),zbr=lb.querySelector('[data-z=reset]');
-function apply(){if(cur)cur.style.transform='translate('+tx+'px,'+ty+'px) scale('+sc+')';if(zl)zl.textContent=Math.round(sc*100)+'%';if(zbo)zbo.disabled=sc<=1.001;if(zbi)zbi.disabled=sc>=7.999;if(zbr)zbr.disabled=sc<=1.001}
-function clamp(){var W=inn.clientWidth,H=inn.clientHeight,w=bw*sc,h=bh*sc;
-  tx=w<=W?(W-w)/2-bx:Math.min(-bx,Math.max(W-w-bx,tx));ty=h<=H?(H-h)/2-by:Math.min(-by,Math.max(H-h-by,ty))}
+var sc=1,tx=0,ty=0,cur=null,P={},pd=0,pm=null,lastTap=0;
+function apply(){if(cur)cur.style.transform='translate('+tx+'px,'+ty+'px) scale('+sc+')'}
+function clamp(){var W=inn.clientWidth,H=inn.clientHeight,w=cur.offsetWidth*sc,h=cur.offsetHeight*sc;
+  tx=w<=W?(W-w)/2:Math.min(0,Math.max(W-w,tx));ty=h<=H?(H-h)/2:Math.min(0,Math.max(H-h,ty))}
 function zoomAt(ns,cx,cy){ns=Math.max(1,Math.min(8,ns));var k=ns/sc;tx=cx-(cx-tx)*k;ty=cy-(cy-ty)*k;sc=ns;clamp();apply()}
 function open(svg){inn.innerHTML='';var c=svg.cloneNode(true);c.removeAttribute('style');inn.appendChild(c);cur=c;lb.classList.add('open');sc=1;P={};pd=0;
-  requestAnimationFrame(function(){if(!cur)return;cur.style.transform='';var r=cur.getBoundingClientRect(),q=inn.getBoundingClientRect();bw=r.width||1;bh=r.height||1;bx=r.left-q.left;by=r.top-q.top;sc=1;tx=0;ty=0;clamp();apply()})}
+  requestAnimationFrame(function(){tx=0;ty=0;clamp();apply()})}
 function close(){lb.classList.remove('open');inn.innerHTML='';cur=null;P={}}
 function dist(){var k=Object.keys(P);if(k.length<2)return 0;var a=P[k[0]],b=P[k[1]];return Math.hypot(a.x-b.x,a.y-b.y)}
 function mid(){var k=Object.keys(P),a=P[k[0]],b=P[k[1]],r=inn.getBoundingClientRect();return{x:(a.x+b.x)/2-r.left,y:(a.y+b.y)/2-r.top}}
@@ -1570,10 +1561,7 @@ document.addEventListener('click',function(e){
   if(z){var box=z.closest('.dw-box');var s=box&&box.querySelector('.dw-svg');if(s)open(s);return}
   if(lb.classList.contains('open')&&(e.target===lb||e.target===xb))close();
 });
-function zc(f){if(!cur)return;zoomAt(sc*f,inn.clientWidth/2,inn.clientHeight/2)}
-function zr(){if(!cur)return;sc=1;tx=0;ty=0;clamp();apply()}
-lb.querySelector('.zt').addEventListener('click',function(e){var b=e.target.closest('button');e.stopPropagation();if(!b||b.disabled)return;var a=b.getAttribute('data-z');if(a==='in')zc(1.4);else if(a==='out')zc(1/1.4);else if(a==='reset')zr()});
-document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();else if(e.key==='+'||e.key==='=')zc(1.4);else if(e.key==='-'||e.key==='_')zc(1/1.4);else if(e.key==='0')zr()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))close()});
 })();
 </script>
 
