@@ -181,6 +181,7 @@ pre{line-height:var(--lh)}
 <li dir="ltr"><b>Advanced:</b> final, static methods, static block, <span class="en">IIB</span> (Instance Initialization Block), <span class="en">SIB</span> (Static Initialization Block).</li>
 <li dir="ltr"><b>Later:</b> Exceptions, GUI (<span class="en">AWT</span> و <span class="en">SWING</span>), Streams, File Handling, Database Connectivity.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>أحمد قرر يبني مدينة اسمها <span class="en">Java City</span>. أول حاجة يتعلم يبني الطوب (<span class="en">Basics</span>)، وبعدها يقفل البيوت بمفاتيح (<span class="en">Encapsulation</span>)، وتبدأ العيلات تورّث بعض الصفات (<span class="en">Inheritance</span>). وبعد كده كل حد يعمل نفس الشغلة بطريقته (<span class="en">Polymorphism</span>)، ويرسم الخرايط من غير تفاصيل السباكة (<span class="en">Abstraction</span>). وفي الآخر بقى هييجي دور الحاجات الكبيرة: الأعطال (<span class="en">Exceptions</span>) والشاشات (<span class="en">GUI</span>) والملفات (<span class="en">Files</span>) وقواعد البيانات (<span class="en">Database</span>).</p></div>
 <h2 class="sec">Arrays</h2>
 <ul>
 <li>الـ <b><span class="lt">array</span></b> تركيب في اللغة بينظم <span class="u">قائمة من العناصر</span> وليه <span class="lt">syntax</span> خاص للوصول لعناصره.</li>
@@ -201,6 +202,7 @@ pre{line-height:var(--lh)}
 <tr><td>القيمة الرابعة</td><td><span class="en">74</span> (<span class="lt">index 3</span>)</td></tr>
 <tr><td><span class="lt">height.length</span></td><td><span class="en">11</span> <span class="n"><span class="lt">length</span> من غير أقواس</span></td></tr>
 </table></div>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>في عمارة اسمها <span class="en">height</span> فيها 11 شقة، كل الشقق ساكنها من نفس النوع (أرقام). الغريبة إن البواب بيرقّم الشقق من <span class="en">0</span> مش من 1، فالدور الأول شقة <span class="en">0</span> وآخر شقة رقمها <span class="en">10</span> مش 11. وكل ما تعوز ساكن تقول اسم العمارة ورقم الشقة، زي <span class="en">height[2]</span>. والحكاية دايماً عن العدد: لو العمارة حجمها <span class="en">N</span> فآخر شقة فيها <span class="en">N-1</span>.</p></div>
 <h2 class="sec">Declaring Arrays</h2>
 <pre>int[] scores = new int[10];</pre>
 <ul>
@@ -223,6 +225,7 @@ for (int value : list)
 <li><span class="lt">ages</span> لـ 100 طفل: <span class="en">int[] ages = new int[100];</span></li>
 <li>طباعة <span class="lt">array</span> اسمها <span class="lt">values</span>: <span class="en">for (int value : values) System.out.println(value);</span></li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>حجزت أرض لعمارة بـ <span class="en">new int[10]</span>، فالأرض اتحجزت لعشر شقق. كلمة <span class="en">int[]</span> بس بتقول "دي عمارة أرقام" لكن مش بتقول عدد الشقق، اللي بيحدد العدد هو <span class="en">new</span>. وعلى الباب في حارس اسمه <span class="en">for-each</span> بيعدي على كل الشقق من الأولى ويقرا اللي فيها، لكنه مش مسموح له يغيّر حاجة جوه الشقق.</p></div>
 <h2 class="sec">Alternate Syntax & Initializer Lists</h2>
 <ul>
 <li>الأقواس ممكن تتحط مع النوع أو مع الاسم، فالاتنين <b><span class="lt">equivalent</span></b> (والأفضل مع النوع):</li>
@@ -238,6 +241,7 @@ char[] grades = {'A', 'B', 'C', 'D', 'F'};</pre>
 <li><span class="r">من غير <span class="lt">new</span> ومن غير تحديد حجم</span>، والحجم = عدد العناصر في القائمة.</li>
 <li>الـ <span class="lt">initializer list</span> بتتستخدم <span class="u">بس في الـ <span class="lt">declaration</span></span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>في طريقتين تجيب بيها عمارة. الأولى تحجز الأرض وتفرش كل شقة لوحدها. والتانية "تسليم مفتاح": <span class="en">{147, 323, 89}</span> وخلاص، العمارة اتبنت واتفرشت في خطوة واحدة من غير <span class="en">new</span> ومن غير ما تقول العدد، لأن الشركة بتعد الأثاث وتعرف الحجم. بس العرض ده بيتقدم وقت الإعلان بس (يعني في نفس سطر تعريف العمارة). وعلى فكرة الأقواس <span class="en">[]</span> تقدر تكتبها جنب النوع أو جنب الاسم، لكن جنب النوع أحسن.</p></div>
 <h2 class="sec">Arrays of Objects</h2>
 <pre>String[] words = new String[5];</pre>
 <ul>
@@ -245,6 +249,7 @@ char[] grades = {'A', 'B', 'C', 'D', 'F'};</pre>
 <li>كل <span class="lt">object</span> لازم يتعمل له <span class="lt">instantiate</span> لوحده، و <span class="en">System.out.println(words[0]);</span> دلوقتي هترمي <b><span class="lt">NullPointerException</span></b>.</li>
 <li>الـ <span class="lt">String</span> ينفع بـ <span class="lt">literals</span>: <span class="en">String[] verbs = {"play", "work", "eat", "sleep", "run"};</span></li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>حجزت قاعة فيها 5 كراسي لـ 5 ضيوف بـ <span class="en">new String[5]</span>. بس الكراسي فاضية، ولسه محدش جه، وكلها <span class="en">null</span>. لو نديت على الضيف الأول قبل ما يوصل هتطلعلك <span class="en">NullPointerException</span>. لازم تجيب كل ضيف بنفسك وتقعّده على كرسيه (<span class="en">instantiate</span> لكل واحد)، إلا لو عملت قائمة الضيوف جاهزة من الأول.</p></div>
 <h2 class="sec">برنامج: max و min والمجموع</h2>
 <p>المطلوب: حجم من المستخدم ثم (1) إدخال العناصر (2) أكبر عنصر ومكانه (3) أصغر عنصر ومكانه (4) المجموع والمتوسط.</p>
 <pre>Scanner scan = new Scanner(System.in);
@@ -266,6 +271,7 @@ System.out.println("total "+sum+" average "+(sum/arr.length));</pre>
 <li><span class="n">تنبيه</span> <span class="en">sum/arr.length</span> قسمة <span class="lt">integers</span> فبتقطع الكسور، للمتوسط الدقيق استخدم <span class="en">(double) sum / arr.length</span>.</li>
 <li><b><span class="lt">Homework</span>:</b> حل نفس المثال بـ <span class="u"><span class="lt">Enhanced-for</span></span> (مفيش <span class="lt">index</span>، فمكان <span class="lt">max</span> و <span class="lt">min</span> هتحتاج عداد يدوي).</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>مدرب عنده كشف درجات الطلبة. أول طالب في الكشف اتتوّج بطل مؤقت (<span class="en">arr[0]</span>)، وبعدها المدرب بيقارنه بالباقي من <span class="en">index 1</span>، وكل ما يلاقي حد أكبر ياخد التاج ويفتكر مكانه. نفس الحكاية بالمقلوب مع أصغر درجة. وفي الآخر بيجمع الدرجات. بس خد بالك: لما تقسم <span class="en">sum/arr.length</span> الكسور بتضيع، فلازم <span class="en">(double)</span> عشان المتوسط يطلع دقيق.</p></div>
 <h2 class="sec">Two-Dimensional Arrays</h2>
 <ul>
 <li>الـ 1<span class="lt">D</span> بتخزن قائمة، والـ <b>2<span class="lt">D</span></b> جدول (<span class="lt">rows</span> و <span class="lt">columns</span>)، وفي <span class="lt">Java</span> هي <span class="u"><span class="lt">array of arrays</span></span>.</li>
@@ -287,6 +293,7 @@ for (int row = 0; row &lt; table.length; row++) {
   System.out.println();
 }</pre>
 <p><b><span class="lt">Output</span>:</b> 5 صفوف، الصف الأول <span class="en">0..9</span> والتاني <span class="en">10..19</span> وهكذا لحد <span class="en">40..49</span>.</p>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>تخيل سينما: في صفوف، وكل صف فيه كراسي. الكرسي بيتحدد برقمين: رقم الصف ورقم الكرسي، زي <span class="en">table[3][6]</span>. والسر إن في <span class="en">Java</span> السينما دي مش جدول واحد، دي "عمارة عمارات": كل صف هو <span class="en">array</span> لوحده. عشان كده بنلف بـ <span class="en">loop</span> بره على الصفوف وجواها <span class="en">loop</span> على الكراسي.</p></div>
 <h2 class="sec">أي declaration صح؟</h2>
 <div class="tw"><table>
 <tr><th>الكود</th><th>الحكم والسبب</th></tr>
@@ -304,6 +311,7 @@ for (int row = 0; row &lt; table.length; row++) {
 <li>أعلى درجة لكل طالب، ومتوسط كل طالب.</li>
 <li>الطالب صاحب أقل درجة في كل امتحان.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>موظف الاستقبال في فندق الـ <span class="en">compiler</span> صارم جداً. أي حجز ناقص بيرفضه: <span class="en">int primes = {2,3}</span> مرفوض لأن الأقواس <span class="en">[]</span> ناقصة. <span class="en">int[] scores = int[30]</span> مرفوض لأن <span class="en">new</span> ناقصة. <span class="en">new {2,3,5}</span> مرفوض لأن <span class="en">new</span> مبتتحطش مع القائمة. و <span class="en">new char[]</span> من غير حجم مرفوض. والحجوزات الصح هي اللي فيها <span class="en">new</span> وحجم، أو قائمة جاهزة.</p></div>
 <div class="sp"></div>
 </div>
 <div class="sig"><span><span class="lt">eng mahmoud mohamed</span></span><small><span class="lt">Coding Create</span> · <span class="lt">Code. Create. Inspire</span>.</small></div>
@@ -329,6 +337,7 @@ for (int row = 0; row &lt; table.length; row++) {
 <li>الـ <span class="en">sum</span> و <span class="en">result</span> بيانات <b><span class="lt">local</span></b>: بتتعمل كل مرة تتنادى فيها الـ <span class="lt">method</span> وبتتمسح لما تخلص.</li>
 <li>تعبير الـ <span class="lt">return</span> لازم يتوافق مع الـ <span class="lt">return type</span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>أم محمد عملت وصفة محشي ومكتوبة على ورقة. كل ما تعوز تطبخ تناديها من غير ما تكتبها من الأول. ده بالظبط الـ <span class="en">method</span>: كود بتكتبه مرة وتناديه كذا مرة. لما تناديها المطبخ بيتفتح وتنفذ الخطوات، ولما تخلص ترجعلك لمكانك. والحاجات اللي جواها زي <span class="en">sum</span> بتتعمل وقت الطبخ وبتتنضف بعده.</p></div>
 <h2 class="sec">أجزاء الـ Method</h2>
 <div class="tw"><table>
 <tr><th>الجزء</th><th>الشرح</th></tr>
@@ -356,6 +365,7 @@ public static void findEvenOdd(int num) {
   if (num % 2 == 0) System.out.println(num + " is even");
   else System.out.println(num + " is odd");
 }</pre>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>ماكينة القهوة هي أحسن مثال. اسم الزرار هو <span class="en">Method Name</span>، والحاجات اللي بتحطها هي الـ <span class="en">parameters</span>، والكباية اللي بتطلع هي الـ <span class="en">return type</span>. ولو الماكينة بتشتغل من غير ما تطلع حاجة تبقى <span class="en">void</span>. وفرق مهم: الفتحة اللي بتتحط فيها البن اسمها <span class="en">formal</span>، والبن اللي حطيته فعلاً اسمه <span class="en">actual</span>، وبيتنسخ في الفتحة وقت النداء.</p></div>
 <h2 class="sec">Types of Method</h2>
 <h3>Predefined (built-in / standard library)</h3>
 <ul>
@@ -381,6 +391,7 @@ public static void findEvenOdd(int num) {
     obj1.myPublicMethod();
   }
 }</pre>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>في حاجات جاهزة من السوبر ماركت زي <span class="en">Math.max(9,7)</span> اسمها <span class="en">Predefined</span>، وفي أكل ماما اللي بتعمله بإيدها وده <span class="en">User-defined</span>. وفي نوعين من الخدمات: <span class="en">static</span> زي ماكينة بيع في الشارع تضغط عليها على طول من غير ما تدخل محل، و <span class="en">public</span> (<span class="en">instance</span>) زي الكافيه، لازم تدخل (تعمل <span class="en">object</span>) الأول وبعدين تطلب.</p></div>
 <h2 class="sec">تمارين Methods</h2>
 <h3>1) rangeGeneration (حدود المدى)</h3>
 <ul>
@@ -410,6 +421,7 @@ public static void findEvenOdd(int num) {
     sum += values[index];
   return sum;
 }</pre>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>المدرس اداهم تلات واجبات. الأول يعد من <span class="en">x</span> لـ <span class="en">y</span> ولو <span class="en">x</span> أكبر يقول <span class="en">Error in Range</span>. التاني معادلة <span class="en">f</span> فيها مجموع أعداد بخطوة معينة ناقص مجموع أعداد بخطوة تانية، على مجموع مضروبات (<span class="en">1!+2!+3!</span>). فحسن عمل <span class="en">method</span> واحدة <span class="en">sum(start,end,step)</span> وناداها مرتين بدل ما يكتب <span class="en">loop</span> كل مرة. ولقى إن حل الـ <span class="en">PDF</span> بيجمع بدل ما يطرح فصلحه، والمقام طلع 9 (<span class="en">1+2+6</span>). والتالت <span class="en">sumArray</span> بتجمع عناصر <span class="en">array</span>.</p></div>
 <h2 class="sec">Variable Length Parameter Lists</h2>
 <ul>
 <li>لما <span class="lt">method</span> تعالج عدد مختلف من القيم في كل نداء (مثلاً <span class="en">average(42,69,37)</span> و <span class="en">average(35,43,93,23,40,21,75)</span>).</li>
@@ -437,6 +449,7 @@ public static void findEvenOdd(int num) {
 <li>برنامج يقرأ درجات 20 طالب ويطبع: المتوسط، أعلى درجة، وعدد الناجحين.</li>
 <li>برنامج يجمع <span class="lt">matrix</span>-ين مدخلين من المستخدم أبعادهم <span class="en">3×5</span> ويطبع الناتج.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>مطعم كل يوم يجيله عدد زباين مختلف. لو عملت طاولة لكل عدد (<span class="en">overloading</span>) هتتعب، ولو جهزت صينية قبل كل مرة (<span class="en">array</span>) هتتعب برضو. فالجرسون قال "أي عدد!" وده <span class="en">int ... list</span>، و <span class="en">Java</span> بتجمعهم في <span class="en">array</span> لوحدها. بس في شروط: العلامة <span class="en">...</span> لازم تكون آخر <span class="en">parameter</span> ومرة واحدة بس في الـ <span class="en">method</span>.</p></div>
 <div class="sp"></div>
 </div>
 <div class="sig"><span><span class="lt">eng mahmoud mohamed</span></span><small><span class="lt">Coding Create</span> · <span class="lt">Code. Create. Inspire</span>.</small></div>
@@ -452,6 +465,7 @@ public static void findEvenOdd(int num) {
 <li><b><span class="lt">Error Handling</span>:</b> حدد هتعمل <span class="en">throw exception</span> ولا ترجع <span class="lt">error codes</span> ولا تعالج جوه الـ <span class="lt">method</span> برسايل مناسبة.</li>
 <li><b><span class="lt">Code Readability</span>:</b> كود نظيف، أسماء <span class="lt">variables</span> و <span class="lt">methods</span> معبرة، تنسيق ثابت، وتعليقات توضح الغرض.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>في مطبخ مطعم محترم، كل طباخ ليه مهمة واحدة (<span class="en">Single Responsibility</span>). وقبل ما يطبخ بيتأكد إن المكونات مش فاسدة أو ناقصة (<span class="en">Validation</span>). والوصفة بتنفع في أكتر من فرع (<span class="en">Reusability</span>). ولو حصل مشكلة بيعرف يتصرف (<span class="en">Error Handling</span>). والوصفة مكتوبة بخط واضح وأسماء مفهومة (<span class="en">Readability</span>).</p></div>
 <h2 class="sec">Guidelines to OO Design</h2>
 <ul>
 <li><b><span class="lt">Understand the requirements</span>:</b> افهم المتطلبات والأهداف، وحدد الـ <span class="lt">functionalities</span> وتفاعلات المستخدم وقيود النظام.</li>
@@ -463,6 +477,7 @@ public static void findEvenOdd(int num) {
 <li><b><span class="lt">Document the design</span>:</b> قرارات وأسباب وعناصر رئيسية، مع <span class="lt">diagrams</span> وتعليقات.</li>
 <li><b><span class="lt">General</span>:</b> الـ <span class="lt">OO design</span> عملية <span class="r"><span class="lt">iterative</span></span>، خليه مرن للتغييرات المستقبلية وراجعه باستمرار للحفاظ على كود عالي الجودة وقابل للتوسع والصيانة.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>سلمى عايزة تعمل تطبيق توصيل. قبل ما تكتب سطر كود، قعدت تفهم المطلوب، وحددت الشخصيات (<span class="en">Customer</span> و <span class="en">Order</span> و <span class="en">Driver</span>) وكل واحد بيعمل إيه، ورسمت علاقاتهم بـ <span class="en">UML</span>. وازنت بين السرعة والبساطة، وعرضت التصميم على الناس واخدت رأيهم بدري، ووثقت قراراتها. وفضلت تعدل التصميم مع الوقت، لأنه عملية مش بتخلص.</p></div>
 <h2 class="sec">ArrayList</h2>
 <ul>
 <li>شبه الـ <span class="lt">array</span> وبتخزن قيم متعددة لكن <span class="u">حجمها ديناميكي</span>، وبتحتاج <span class="en">import java.util.ArrayList;</span></li>
@@ -477,6 +492,7 @@ public static void findEvenOdd(int num) {
 <tr><td>إدخال في مكان</td><td><span class="en">nameList.add(1, "Mary");</span></td></tr>
 <tr><td>استبدال عنصر</td><td><span class="en">nameList.set(1, "Becky");</span></td></tr>
 </table></div>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>الـ <span class="en">array</span> دولاب بعدد رفوف ثابت، أما <span class="en">ArrayList</span> فهي شنطة مطاطية بتكبر لما تحط فيها. <span class="en">add</span> تحط، <span class="en">remove</span> تشيل، <span class="en">get</span> تطلع حاجة، <span class="en">size</span> تعد اللي جوه، <span class="en">set</span> تبدل. ومتنساش تطلب الشنطة من المكتبة الأول بـ <span class="en">import java.util.ArrayList;</span>.</p></div>
 <h2 class="sec">Primitives and Wrappers</h2>
 <ul>
 <li dir="ltr"><span class="lt">Primitive</span>: <span class="en">byte, short, int, long, double, float, char</span> (و <span class="lt">boolean</span>).</li>
@@ -492,6 +508,7 @@ public static void findEvenOdd(int num) {
 <li>الـ <span class="lt">Integer</span> و <span class="lt">Long</span> فيهم <span class="en">toBinaryString, toHexString, toOctalString</span>، مثلاً للرقم 14 بيطلع <span class="en">1110</span> و <span class="en">e</span> و <span class="en">16</span>.</li>
 <li><span class="en">MIN_VALUE</span> و <span class="en">MAX_VALUE</span>: <span class="lt">static final</span> في كل <span class="lt">wrapper</span> رقمي، مثل <span class="en">Integer.MAX_VALUE</span> و <span class="en">Double.MIN_VALUE</span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p><span class="en">int</span> راجل بسيط (<span class="en">primitive</span>) والـ <span class="en">ArrayList</span> عمارة مبتقبلش غير الناس الرسمية (<span class="en">objects</span>). فعشان يدخل لازم يلبس بدلة اسمها <span class="en">Integer</span>. وده معنى الـ <span class="en">Wrapper</span>. وبالبدلة دي بيتعلم مهارات: <span class="en">parseInt</span> تحول نص <span class="en">"2599"</span> لرقم و <span class="en">toString</span> تعمل العكس، و <span class="en">MAX_VALUE</span> تقولك أكبر رقم ينفع. ومتنساش: <span class="en">ArrayList&lt;int&gt;</span> غلط، والصح <span class="en">ArrayList&lt;Integer&gt;</span>.</p></div>
 <h2 class="sec">Character Wrapper</h2>
 <div class="tw"><table>
 <tr><th><span class="lt">Method</span></th><th>بترجع</th></tr>
@@ -504,6 +521,7 @@ public static void findEvenOdd(int num) {
 <tr><td><span class="lt">toLowerCase</span>(<span class="lt">ch</span>)</td><td>الـ <span class="lt">char</span> بالصغير</td></tr>
 <tr><td><span class="lt">toUpperCase</span>(<span class="lt">ch</span>)</td><td>الـ <span class="lt">char</span> بالكبير</td></tr>
 </table></div>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>في حارس بوابة اسمه <span class="en">Character</span> بيفحص كل حرف داخل: رقم؟ (<span class="en">isDigit</span>) حرف؟ (<span class="en">isLetter</span>) صغير؟ (<span class="en">isLowerCase</span>) كبير؟ (<span class="en">isUpperCase</span>) مسافة؟ (<span class="en">isSpaceChar</span>). وبيعرف كمان يحول الحرف لصغير أو كبير بـ <span class="en">toLowerCase</span> و <span class="en">toUpperCase</span>.</p></div>
 <h2 class="sec">String Class</h2>
 <ul>
 <li>الـ <span class="lt">String</span> بتلف حوالين <span class="lt">array of char</span>، وفيها: <span class="en">charAt(int)</span>، <span class="en">length()</span>، <span class="en">startsWith(str)</span>، <span class="en">endsWith(str)</span>.</li>
@@ -521,6 +539,7 @@ public static void findEvenOdd(int num) {
 <li>فيها <span class="u">حرف كبير واحد على الأقل وحرف صغير واحد على الأقل</span>.</li>
 <li>فيها <span class="u">رقم واحد على الأقل</span>. (استخدم <span class="en">Character.isUpperCase / isLowerCase / isDigit</span> في <span class="lt">loop</span>).</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>الـ <span class="en">String</span> قطر حروف متراصة. <span class="en">charAt</span> بتجيبلك الحرف في مكان معين، و <span class="en">indexOf</span> بتدور على حرف أو كلمة، و <span class="en">substring</span> بتقص جزء، و <span class="en">replace</span> بتبدل، و <span class="en">trim</span> بتشيل المسافات من الأطراف، و <span class="en">startsWith</span> و <span class="en">endsWith</span> بيشيكوا على البداية والنهاية (والحروف الكبيرة غير الصغيرة). وفي الآخر حارس كلمة السر <span class="en">Password Checker</span> بيشترط: 6 أحرف على الأقل، حرف كبير، حرف صغير، ورقم.</p></div>
 <div class="sp"></div>
 </div>
 <div class="sig"><span><span class="lt">eng mahmoud mohamed</span></span><small><span class="lt">Coding Create</span> · <span class="lt">Code. Create. Inspire</span>.</small></div>
@@ -543,6 +562,7 @@ To execute:  java Simple</pre>
 <li><b><span class="lt">JDK</span></b> = <span class="lt">JRE</span> + أدوات التطوير (<span class="en">javac.exe, java.exe</span>)، وعند التشغيل بيفتح الـ <span class="lt">JRE</span> ويحمل الكلاس وينفذ <span class="en">main</span>.</li>
 <li>هل أحفظ الملف باسم غير اسم الكلاس؟ <b>نعم لو الكلاس مش <span class="lt">public</span></b>، وينفع كذا <span class="lt">class</span> في ملف واحد (كل <span class="lt">class</span> بيطلع له <span class="en">.class</span>).</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>كتبت رسالة بالعربي (<span class="en">Simple.java</span>). المترجم <span class="en">javac</span> حوّلها للغة عالمية اسمها <span class="en">bytecode</span> (ملف <span class="en">.class</span>). وفي كل بلد (<span class="en">Windows</span> أو <span class="en">Mac</span>) في مترجم فوري اسمه <span class="en">JVM</span> بيفهم اللغة دي وينفذها. والـ <span class="en">JRE</span> هو الـ <span class="en">JVM</span> + مكتباته (عشان تشغّل)، والـ <span class="en">JDK</span> هو الـ <span class="en">JRE</span> + أدوات البناء زي <span class="en">javac</span> (عشان تبني).</p></div>
 <h2 class="sec">Variables & Data Types</h2>
 <ul>
 <li>أنواع المتغيرات: <b><span class="lt">local</span></b> (جوه <span class="lt">method</span>)، <b><span class="lt">instance</span></b> (جوه الكلاس لكل <span class="lt">object</span>)، <b><span class="lt">static</span></b> (مشتركة بين الكل).</li>
@@ -566,6 +586,7 @@ To execute:  java Simple</pre>
 <li>الـ <span class="lt">primitive</span> ليها قيمة دايماً، والـ <span class="lt">non-primitive</span> ممكن تكون <span class="en">null</span>.</li>
 <li>الـ <span class="lt">primitive</span> بتبدأ بحرف <span class="u"><span class="lt">small</span></span>، والـ <span class="lt">non-primitive</span> بحرف <span class="u"><span class="lt">Capital</span></span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>عندك صناديق تخزين بأحجام مختلفة: <span class="en">byte</span> صندوق صغير من -128 لـ 127، و <span class="en">int</span> عادي، و <span class="en">long</span> ضخم، و <span class="en">float</span> و <span class="en">double</span> للكسور، و <span class="en">boolean</span> زرار تشغيل/إطفاء، و <span class="en">char</span> حرف واحد. والصناديق دي ممكن تتحط جوه غرفة (<span class="en">local</span>) أو لكل شخص (<span class="en">instance</span>) أو للعيلة كلها (<span class="en">static</span>). وملحوظة: الأنواع البسيطة بتبدأ بحرف <span class="en">small</span> والمعقدة بحرف <span class="en">Capital</span> وهي بس اللي ممكن تبقى <span class="en">null</span>.</p></div>
 <h2 class="sec">Casting</h2>
 <ul>
 <li><b><span class="lt">Widening</span> (أوتوماتيك):</b> من صغير لكبير: <span class="en">byte → short → char → int → long → float → double</span></li>
@@ -588,6 +609,7 @@ System.out.println(myInt);     // 9</pre>
 <ul>
 <li><span class="en">F</span> أقل من 60، <span class="en">D</span> من 60 لأقل من 70، <span class="en">C</span> من 70 لأقل من 80، <span class="en">B</span> من 80 لأقل من 90، <span class="en">A</span> من 90 فأكتر.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>كباية صغيرة في كباية كبيرة بتتصب أوتوماتيك، ده <span class="en">Widening</span>. لكن العكس (<span class="en">Narrowing</span>) لازم تعمله بإيدك بـ <span class="en">(int)</span> وهتخسر جزء، فـ <span class="en">9.78</span> بتبقى <span class="en">9</span>. ولو صبيت 260 في <span class="en">byte</span> (مداه 256 قيمة) هيطلع <span class="en">260 % 256 = 4</span>. وأقصى <span class="en">int</span> لما تزود عليه واحد بيلف لأصغر قيمة زي عداد الكيلومترات. و <span class="en">char c = 65</span> بتطلع <span class="en">A</span>.</p></div>
 <h2 class="sec">Java Program Structure & Packages</h2>
 <ul>
 <li>الهيكل: <span class="en">Documentation</span> (مقترح)، <span class="en">Package</span>، <span class="en">Import</span>، <span class="en">Interface</span>، <span class="en">Class definitions</span> (اختيارية)، و <b><span class="lt">Main method class</span></b> (أساسي).</li>
@@ -595,6 +617,7 @@ System.out.println(myInt);     // 9</pre>
 <li>الـ <span class="lt">Java API</span> مكتبة <span class="lt">classes</span> جاهزة، ولاستخدام <span class="lt">class</span> أو <span class="lt">package</span> كامل بنستخدم <span class="en">import</span>.</li>
 <li dir="ltr">مثال: <span class="en">java.lang</span> (System, String), <span class="en">java.util</span> (ArrayList, Map), <span class="en">java.awt</span> (Button).</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>تخيل مبنى شركة: كل قسم في دور مستقل (<span class="en">package</span>) عشان الأسماء ميتلخبطوش. والشركة بتجيب خدمات جاهزة من مكتبة كبيرة اسمها <span class="en">Java API</span> بـ <span class="en">import</span>، زي <span class="en">java.util</span>. وكل المبنى بيشتغل من باب واحد اسمه <span class="en">main</span>.</p></div>
 <h2 class="sec">Class & Object</h2>
 <ul>
 <li>الـ <b><span class="lt">class</span></b> كود بيوصف نوع معين من الـ <span class="lt">objects</span>: الـ <span class="lt">data</span> (<b><span class="lt">fields</span></b>) والأفعال (<b><span class="lt">methods</span></b>)، وهو <span class="u"><span class="lt">blueprint</span></span>.</li>
@@ -614,6 +637,7 @@ System.out.println(myInt);     // 9</pre>
 <ul>
 <li>الـ <span class="en">private</span> <span class="lt">members</span> مينفعش نوصلها من برا (<span class="en">time.hour = 13;</span> غلط)، لكن الـ <span class="lt">public methods</span> (<span class="en">setTime, toString, toUniversalString</span>) تمام.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>مهندس معماري عنده رسمة بيت (<span class="en">class</span>)، والبيوت اللي اتبنت منها (<span class="en">objects</span>). الرسمة لوحدها مبتاخدش أرض، الأرض بتتحجز لما تقول <span class="en">new</span>. وفي كلاس <span class="en">Time1</span> الساعة والدقيقة جوه أوضة مقفولة (<span class="en">private</span>)، وتقدر تغيرها بس من الشباك العام <span class="en">setTime</span> وهو بيتأكد إن القيمة في الحدود.</p></div>
 <h2 class="sec">Constructors</h2>
 <ul>
 <li><span class="lt">method</span> خاصة بتتنادى <span class="u">أوتوماتيك لما <span class="lt">object</span> يتعمل</span>، وبتهيئ الـ <span class="lt">instance fields</span>.</li>
@@ -632,6 +656,7 @@ Rectangle Rx2 = new Rectangle(12, 90.3);</pre>
 <li><span class="n">تصحيح</span> السلايد كاتب <span class="en">(in len, int wi)</span> والصح <span class="en">(double len, double wi)</span>.</li>
 <li><b><span class="lt">Circle</span>:</b> 3 <span class="lt">constructors</span>: <span class="en">(x, y, radius)</span> و <span class="en">(radius)</span> (المركز 0,0) و <span class="en">()</span> (نصف قطر 1.0)، و <span class="en">area = 3.14*r*r</span> و <span class="en">circumference = 2*3.14*r</span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>لما مولود بيتولد (<span class="en">new</span>) المستشفى بتسجله أوتوماتيك. ده <span class="en">Constructor</span>: اسمه نفس اسم الكلاس ومفيهوش <span class="en">return</span> ولا حتى <span class="en">void</span>. تقدر تسجل بدون بيانات (القيم صفر)، أو بالتفاصيل <span class="en">Rectangle(12, 90.3)</span>. ولو معملتش ولا واحد بنفسك، <span class="en">Java</span> بتعمل <span class="en">default</span> وتسجله بقيم افتراضية.</p></div>
 <h2 class="sec">Accessors & Mutators</h2>
 <ul>
 <li>الـ <span class="lt">fields</span> عادةً <span class="en">private</span>، ولكل <span class="lt">field</span> <b><span class="lt">accessor</span> (<span class="lt">getter</span>)</b> بيرجّع قيمته، و <b><span class="lt">mutator</span> (<span class="lt">setter</span>)</b> بيغيرها.</li>
@@ -641,6 +666,7 @@ Rectangle Rx2 = new Rectangle(12, 90.3);</pre>
 public double getWidth() { return width; }
 public void setWidth(double wi) { width = wi; }
 public double getArea() { return width * length; }</pre>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>فكر في ماكينة الصراف: مبتدخلش إيدك في الخزنة (<span class="en">private</span>). إنت بتسأل عن الرصيد (<span class="en">getter</span>) أو بتطلب تغيير (<span class="en">setter</span>)، والبنك يراجع الحدود الأول. كده الـ <span class="en">fields</span> متحمية وعندك أبواب منظمة تتعامل بيها.</p></div>
 <h2 class="sec">this keyword</h2>
 <ul>
 <li>بتشاور على <span class="u">الـ <span class="lt">object</span> نفسه</span>، وبتتستخدم للوصول لأعضاء الكلاس لما يكون ليهم نفس اسم الـ <span class="lt">parameters</span>.</li>
@@ -650,6 +676,7 @@ public double getArea() { return width * length; }</pre>
   this.y = y;
   this.r = r;
 }</pre>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>في فصل في تلميذين اسمهم أحمد. المدرس بيقول <span class="en">this.x = x</span> يعني "أنا أحمد بتاع الفصل (الـ <span class="en">field</span>) مش أحمد اللي جاي من بره (الـ <span class="en">parameter</span>)". الـ <span class="en">this</span> بتشاور على الـ <span class="en">object</span> نفسه.</p></div>
 <div class="sp"></div>
 </div>
 <div class="sig"><span><span class="lt">eng mahmoud mohamed</span></span><small><span class="lt">Coding Create</span> · <span class="lt">Code. Create. Inspire</span>.</small></div>
@@ -672,10 +699,12 @@ public double getArea() { return width * length; }</pre>
 <tr><td><span class="lt">Variables</span></td><td><span class="r"><span class="lt">Violate encapsulation</span></span></td><td><span class="lt">Enforce encapsulation</span></td></tr>
 <tr><td><span class="lt">Methods</span></td><td><span class="lt">Provide services to clients</span></td><td><span class="lt">Support other methods in the class</span></td></tr>
 </table></div>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>التلفزيون هو أحسن مثال: بتضغط على الريموت (الـ <span class="en">interface</span>) ومش بتفتح الكارت من الجوه. التفاصيل والدوائر مخفية. ده الـ <span class="en">Encapsulation</span>: الداتا (<span class="en">fields</span>) والعمليات (<span class="en">methods</span>) في كبسولة واحدة، وأي تغيير في الحالة بيتم من <span class="en">methods</span> الـ <span class="en">object</span> نفسه، والعميل (<span class="en">client</span>) ميعرفش الشغل اتعمل إزاي.</p></div>
 <h2 class="sec">Information Hiding</h2>
 <ul>
 <li>تقييد الوصول لأجزاء من الـ <span class="lt">object</span>، باستخدام الـ <span class="en">private</span> <span class="lt">access specifier</span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>خزنة في البنك بمفتاح واحد (<span class="en">private</span>). الزبون بيشوف الشباك بس، مش بيشوف الفلوس ولا الأرقام السرية. ده الـ <span class="en">Information Hiding</span>: نمنع الوصول من برا لأجزاء الـ <span class="en">object</span>.</p></div>
 <h2 class="sec">تمارين Encapsulation</h2>
 <h3>1) كلاس Course</h3>
 <ul>
@@ -690,6 +719,7 @@ public double getArea() { return width * length; }</pre>
 <li><span class="en">getCurrentValue</span> بتحسب القيمة السوقية = <span class="en">purchasePrice * (1 - age * 5/100)</span>.</li>
 <li>كلاس <span class="en">CarDemo</span> بـ <span class="lt">main</span> يجرب 3 قيم. <span class="n">الـ <span class="lt">age</span> = السنة الحالية - <span class="lt">year</span></span></li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>في تمرينين: <span class="en">Course</span> و <span class="en">Car</span>. في كل واحد الخصائص <span class="en">private</span> ومعاها <span class="en">getters</span> و <span class="en">setters</span> و <span class="en">constructor</span>. وجوه الكلاس بتتحسب حاجات: متوسط درجات الطلبة، وقيمة العربية اللي بتقل 5% كل سنة. وبرنامج <span class="en">Demo</span> بيجرب 3 قيم مختلفة من بره من غير ما يلمس الداخل.</p></div>
 <h2 class="sec">Inheritance</h2>
 <ul>
 <li>الكلاس بيقدر <span class="u">يورّث</span> <span class="lt">fields</span> و <span class="lt">methods</span> من كلاس تاني، والموروث بيظهر كأنه جزء من الكلاس الوارث.</li>
@@ -794,6 +824,7 @@ class Test extends TestInheritance {
 <ul>
 <li><span class="n">توضيح</span> في <span class="lt">package</span> مختلف: <span class="en">t.p = 777</span> تمام (عن طريق <span class="lt">reference</span> من نوع الـ <span class="lt">subclass</span>)، لكن <span class="en">t2.p = 888</span> <span class="r"><span class="lt">Error</span></span> لأن الوصول عبر <span class="lt">reference</span> من نوع الـ <span class="lt">parent</span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>الابن بيورث من أبوه العينين والطول (<span class="en">extends</span>)، ويضيف عليهم صفاته الخاصة. والعلاقة بينهم <span class="en">is-a</span> (الابن نسخة أخص من الأب). وقبل ما الابن يتولد لازم الأب يتولد الأول، عشان كده <span class="en">super()</span> بتتنفذ أول حاجة في <span class="en">constructor</span> الابن. بس <span class="en">constructors</span> نفسها مبتتورثش.</p></div>
 <h2 class="sec">Final & Modifiers</h2>
 <ul>
 <li><b><span class="lt">Final class</span>:</b> مينفعش يتورث، وبيسمح للـ <span class="lt">compiler</span> يحسّن نداء الـ <span class="lt">methods</span>.</li>
@@ -826,6 +857,7 @@ class Test extends TestInheritance {
 <li>تمرير الـ <span class="lt">object</span> الحالي كـ <span class="lt">argument</span>: <span class="en">m(this);</span> داخل <span class="lt">method</span>.</li>
 <li>إرجاع الـ <span class="lt">object</span> الحالي: <span class="en">A getA() { return this; }</span> ثم <span class="en">new A().getA().msg();</span></li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>العيلة اللي اسمها <span class="en">final class</span> مفيهاش ورثة. و <span class="en">final method</span> وصية مفيش حد يغيرها (بتتورث لكن مبتتعملش <span class="en">override</span>). و <span class="en">final variable</span> اسم مكتوب بحبر جاف مش بيتمسح. وفي الأبواب (<span class="en">modifiers</span>): <span class="en">public</span> حديقة عامة، <span class="en">private</span> أوضتك، <span class="en">default</span> الحي، و <span class="en">protected</span> للعيلة وجيرانها. و <span class="en">this()</span> بتنادي <span class="en">constructor</span> تاني في نفس الكلاس.</p></div>
 <h2 class="sec">Visibility و protected</h2>
 <ul>
 <li>كل <span class="lt">variables</span> و <span class="lt">methods</span> الـ <span class="lt">parent</span> (<span class="u">حتى الـ <span class="lt">private</span></span>) <b>بتتورث</b> للـ <span class="lt">children</span>.</li>
@@ -843,6 +875,7 @@ class Test extends TestInheritance {
 <tr><td><span class="lt">Different package subclass</span></td><td><span class="lt">No</span></td><td><span class="lt">No</span></td><td><span class="lt">Yes</span></td><td><span class="lt">Yes</span></td></tr>
 <tr><td><span class="lt">Different package non-subclass</span></td><td><span class="lt">No</span></td><td><span class="lt">No</span></td><td><span class="lt">No</span></td><td><span class="lt">Yes</span></td></tr>
 </table></div>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>الابن بيرث كل حاجة حتى أسرار أبوه (<span class="en">private</span>)، لكنه مبيقدرش يفتحها بالاسم، لازم يطلبها من أبوه عن طريق <span class="en">methods</span> الأب. و <span class="en">protected</span> هي الوسط: العيلة (الـ <span class="en">subclasses</span>) والجيران في نفس الـ <span class="en">package</span> يقدروا يشوفوها. والجدول بيوضح مين يدخل فين.</p></div>
 <h2 class="sec">Class Hierarchies & Object Class</h2>
 <ul>
 <li>الـ <span class="lt">child</span> ممكن يبقى <span class="lt">parent</span> لـ <span class="lt">child</span> تاني فبيتكون <b><span class="lt">class hierarchy</span></b>، وولادين نفس الـ <span class="lt">parent</span> اسمهم <b><span class="lt">siblings</span></b>.</li>
@@ -851,11 +884,13 @@ class Test extends TestInheritance {
 <li><span class="en">toString</span> متعرفة في <span class="lt">Object</span> وبترجع اسم الكلاس + <span class="lt">hash code</span>، وكل ما نعرّف <span class="lt">toString</span> إحنا بنعمل <b><span class="lt">override</span></b>.</li>
 <li><span class="en">equals</span> في <span class="lt">Object</span> بترجع <span class="lt">true</span> لو الـ <span class="lt">references</span> <b><span class="lt">aliases</span></b>، وممكن نعمل <span class="lt">override</span> لتعريف تساوي أنسب، والـ <span class="en">String</span> عاملة <span class="lt">override</span> تقارن الحروف.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>شجرة عيلة: على القمة الجد الأكبر <span class="en">Object</span>، وكل الكلاسات بتنزل منه. الصفات المشتركة بتتحط فوق. و <span class="en">toString</span> عند الجد بتطلع اسم غريب فكل ابن بيعمل لها <span class="en">override</span>. و <span class="en">equals</span> بتسأل "هل ده نفس الشخص؟"، والـ <span class="en">String</span> عاملة لها <span class="en">override</span> عشان تقارن الحروف.</p></div>
 <h2 class="sec">Multiple Inheritance</h2>
 <ul>
 <li><span class="lt">Java</span> تدعم <b><span class="lt">single inheritance</span></b>: الـ <span class="lt">derived class</span> له <span class="lt">parent</span> واحد بس.</li>
 <li>الـ <span class="lt">multiple inheritance</span> بيخلي <span class="lt">class</span> يتشتق من أكتر من <span class="lt">class</span>، وبتحصل <span class="lt">collisions</span> (نفس اسم <span class="lt">variable</span> في <span class="lt">parent</span>ين) ولازم تتحل، وهو مش مطلوب غالباً و<span class="lt">Java</span> <span class="r">مش بتدعمه</span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>طفل ليه أب واحد بس: ده شكل الـ <span class="en">Java</span>. لأنه لو كان ليه أبوين، واحد قاله "نام الساعة 9" والتاني "الساعة 10"، هيحصل تعارض (<span class="en">collision</span>). عشان كده <span class="en">Java</span> قررت: <span class="en">parent</span> واحد للكلاس. لكن تقدر تتعلم من أكتر من مدرب عن طريق الـ <span class="en">interfaces</span>.</p></div>
 <h2 class="sec">Overloading & Overriding</h2>
 <div class="tw"><table>
 <tr><th><span class="lt">Overloading</span></th><th><span class="lt">Overriding</span></th></tr>
@@ -881,6 +916,7 @@ class Test extends TestInheritance {
 <li>الـ <span class="lt">overloading</span> بتغيير الـ <b><span class="lt">return type</span> بس</b>؟ <span class="r"><span class="lt">False</span></span>، بيحصل <span class="lt">conflict</span>.</li>
 <li>الكود <span class="en">ParentClass.msg()</span> (<span class="lt">default</span>) و <span class="en">ChildClass</span> بيعمله <span class="en">protected</span> ويشتغل؟ <b>أيوه</b> لأن الـ <span class="lt">overriding method</span> أقل تقييداً.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>الـ <span class="en">Overloading</span>: محل سندوتشات عنده "ساندوتش" بأحجام مختلفة، نفس الاسم لكن المعطيات تختلف. الـ <span class="en">Overriding</span>: الابن غيّر وصفة أبوه بنفس الاسم تماماً، بشرط ما يضيّقش الصلاحية. الترتيب <span class="en">private &lt; default &lt; protected &lt; public</span>، فلو الأب <span class="en">default</span> الابن ينفع يخليها <span class="en">protected</span> أو <span class="en">public</span>، لكن مينفعش يرجّعها أضيق. ومتنساش <span class="en">main</span> مينفعش <span class="en">override</span> لأنها <span class="en">static</span>، لكن <span class="en">overload</span> ينفع.</p></div>
 <div class="sp"></div>
 </div>
 <div class="sig"><span><span class="lt">eng mahmoud mohamed</span></span><small><span class="lt">Coding Create</span> · <span class="lt">Code. Create. Inspire</span>.</small></div>
@@ -917,6 +953,7 @@ public class Student extends Person {
   }
 }</pre>
 <ul><li><span class="n">ملحوظة</span> الـ <span class="lt">PDF</span> ما فيهوش الحل، فده حل مني.</li></ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>مهندس معماري سلّم المقاول رسمة (<span class="en">UML</span>) فيها <span class="en">Person</span> و <span class="en">Student</span>. السهم من <span class="en">Student</span> لـ <span class="en">Person</span> يعني <span class="en">extends</span>، والعلامة <span class="en">-</span> معناها <span class="en">private</span> والعلامة <span class="en">+</span> معناها <span class="en">public</span>. والمقاول قعد يبني الكلاسين زي الرسمة بالظبط.</p></div>
 <h2 class="sec">تمرين الرحلة (Flight)</h2>
 <ul>
 <li>كلاس <span class="en">C1</span> بيمثل رحلة جوية: <span class="en">String airline, departureAirport, arrivalAirport</span> و <span class="en">int flightNumber, seatCapacity, bookedSeats</span>.</li>
@@ -931,6 +968,7 @@ public class Student extends Person {
 }
 public void bookSeat()   { if (bookedSeats &lt; seatCapacity) bookedSeats++; }
 public void cancelSeat() { if (bookedSeats &gt; 0) bookedSeats--; }</pre>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>شركة طيران عندها رحلة بعدد كراسي. لو الموظف دخل سعة صفر أو سالبة، الشركة تعتبرها 100. <span class="en">bookSeat</span> بتحجز كرسي لو في مكان، و <span class="en">cancelSeat</span> بتلغي لو في حجز. مفيش حد بيحجز في رحلة مليانة ولا يلغي من رحلة فاضية.</p></div>
 <h2 class="sec">Task 1: BankAccount</h2>
 <ul>
 <li>الخصائص <span class="en">private</span>: رقم الحساب (<span class="lt">String</span>)، اسم الصاحب (<span class="lt">String</span>)، الرصيد (<span class="lt">double</span>)، مع <span class="lt">getters</span> و <span class="lt">setters</span>.</li>
@@ -961,6 +999,7 @@ public void cancelSeat() { if (bookedSeats &gt; 0) bookedSeats--; }</pre>
 <li>الـ <span class="lt">main</span>: بيقرا <span class="en">name</span> ثم <span class="en">number</span> ثم <span class="en">balance</span>، وينشئ <span class="en">new BankAccount(number, name, balance)</span> ثم <span class="lt">Deposit</span> و <span class="lt">withdraw</span> و <span class="lt">DisplayAccountInfo</span>.</li>
 <li><span class="n">تنبيه</span> الكود مش بيرفض مبلغ سالب في <span class="en">Deposit</span>، وبما إن <span class="en">setBalance</span> <span class="lt">public</span> ممكن تكسر الفكرة، فالأفضل تتحقق من القيمة.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>البنك بيحمي الرصيد: <span class="en">balance</span> <span class="en">private</span> ومحدش يمد إيده فيه. العميل بيطلب من الموظف: <span class="en">Deposit</span> تضيف، و <span class="en">withdraw</span> تسحب لو الرصيد كفاية وإلا تطلع "can not withdraw this amount"، و <span class="en">DisplayAccountInfo</span> تعرض البيانات. ده معنى <span class="en">data integrity</span>.</p></div>
 <h2 class="sec">Task 2: Person class</h2>
 <ul>
 <li>الكلاس المبدئي: <span class="en">private String name; private int age;</span> مع <span class="en">setName</span> و <span class="en">getName</span>. المطلوب إكماله:</li>
@@ -970,6 +1009,7 @@ public void cancelSeat() { if (bookedSeats &gt; 0) bookedSeats--; }</pre>
 <li>إضافة <b><span class="lt">phone</span></b> (11 رقم يبدأ بـ <span class="en">010</span> أو <span class="en">012</span> أو <span class="en">015</span>) و <b><span class="lt">email</span></b> (النمط <span class="en">username@subdomain.domain</span>).</li>
 <li>إضافة <b><span class="lt">birth date</span></b> (يوم وشهر وسنة) <span class="r">كـ <span class="lt">class</span> مستقل من غير <span class="lt">Java Date</span></span>، مع <span class="lt">get/set</span> وتحقق من اليوم والشهر والسنة.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>مدرسة بتسجل بيانات طالب، وعلى كل خانة حارس. السن لازم بين 20 و40. الاسم حروف إنجليزي ومينفعش يزيد عن 20 حرف. الموبايل 11 رقم يبدأ بـ 010 أو 012 أو 015. والإيميل على نمط <span class="en">username@domain</span>. وتاريخ الميلاد كلاس مستقل بحراسه الخاصين.</p></div>
 <h2 class="sec">Palindrome</h2>
 <ul>
 <li>الـ <span class="lt">palindrome</span> كلمة أو جملة بتتقرأ بنفس الشكل من الاتجاهين. المطلوب برنامج يقرا تسلسل حروف ويرجّع <span class="en">True</span> أو <span class="en">False</span> بكود <span class="u">كفء</span>.</li>
@@ -986,6 +1026,7 @@ public void cancelSeat() { if (bookedSeats &gt; 0) bookedSeats--; }</pre>
 <ul>
 <li>القراءة بـ <span class="en">scan.next()</span> بتاخد كلمة واحدة بس (من غير مسافات). ويكفي نقارن لحد نص الكلمة.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>اتنين واقفين على طرفي كلمة، واحد من الأول (<span class="en">i</span>) وواحد من الآخر (<span class="en">j</span>)، وبيمشوا ناحية بعض. لو الحرفين زي بعض كملوا، وأول ما يلاقوا اختلاف <span class="en">return false</span> على طول. لو قابلوا بعض من غير اختلاف يبقى <span class="en">palindrome</span> زي <span class="en">madam</span>.</p></div>
 <h2 class="sec">تحدي: مسح الأرقام</h2>
 <ul>
 <li>مثال: <span class="en">Y1a2s1s3er</span> يبقى <span class="en">Yasser</span> وبأقل عدد سطور.</li>
@@ -997,6 +1038,7 @@ for (int i = 0; i &lt; str.length(); i++) {
 }
 System.out.println("the result is " + result);</pre>
 <ul><li><span class="n">أقصر</span> سطر واحد: <span class="en">str.replaceAll("[0-9]", "")</span></li></ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p><span class="en">Y1a2s1s3er</span> كلمة مليانة أرقام. الغربال بياخد الحروف بس (<span class="en">isAlphabetic</span>) ويرمي الأرقام فيطلع <span class="en">Yasser</span>. وفي حل في سطر واحد بس: <span class="en">str.replaceAll("[0-9]", "")</span>.</p></div>
 <h2 class="sec">Polymorphism</h2>
 <ul>
 <li>مفهوم <span class="lt">OO</span> بيدي تصميمات مرنة، ومعناه "أشكال متعددة".</li>
@@ -1013,6 +1055,7 @@ System.out.println("the result is " + result);</pre>
 <li>لو <span class="lt">Christmas</span> فيها <span class="en">getTree</span> و<span class="lt">Holiday</span> ملهاش، فـ <span class="en">day.getTree();</span> <span class="r"><span class="lt">compiler error</span></span> والحل <span class="en">((Christmas)day).getTree();</span></li>
 <li><span class="en">MusicPlayer mplayer = new CDPlayer();</span> <b><span class="lt">Yes</span></b> (<span class="lt">CDPlayer is-a MusicPlayer</span>)، و <span class="en">CDPlayer cdplayer = new MusicPlayer();</span> <b><span class="lt">No</span></b> بدون <span class="lt">cast</span> ومينفعش تعملها عن قصد.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>الريموت الواحد (<span class="en">reference</span>) ممكن يشغل تلفزيون أو مكيف أو راديو. ومين اللي هيشتغل بيتحدد وقت الضغط مش وقت ما اشتريت الريموت، وده <span class="en">dynamic binding</span>. فـ <span class="en">Holiday day = new Christmas()</span> ممكن، و <span class="en">day.celebrate()</span> تشتغل حسب الجهاز الفعلي. بس لو الجهاز ليه زرار خاص (<span class="en">getTree</span>) لازم <span class="en">cast</span> الأول.</p></div>
 <h2 class="sec">Types of Polymorphism</h2>
 <div class="tw"><table>
 <tr><th>النوع</th><th>الشرح</th></tr>
@@ -1037,6 +1080,7 @@ List&lt;Integer&gt; iList = new ArrayList&lt;Integer&gt;(); iList.add(10);</pre>
 <ul>
 <li>قاعدة الـ <span class="lt">subclassing</span>: أي قيمة تنتمي للـ <span class="lt">subclass</span> (<span class="lt">S1</span>, <span class="lt">S2</span>, <span class="lt">S3</span>) تنتمي كمان للـ <span class="lt">super class T</span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>في 4 حواديت. <span class="en">Ad hoc</span>: محل بيبيع أنواع محدودة ومعروفة (<span class="en">overloading</span>). <span class="en">Coercion</span>: تحويل ضمني أوتوماتيك زي <span class="en">int</span> لـ <span class="en">double</span>. <span class="en">Inclusion</span>: سباك بيشتغل مع أي فرد من العيلة، فـ <span class="en">processDetails(Person)</span> تشتغل مع <span class="en">Employee</span> و <span class="en">Customer</span>. و <span class="en">Parametric</span>: علبة بتقبل أي حاجة زي <span class="en">List&lt;T&gt;</span>.</p></div>
 <h2 class="sec">مثال Animal / Dog / Cat</h2>
 <pre>class Animal {
   private String name;
@@ -1069,6 +1113,7 @@ if (myDog instanceof Dog) {    // downcasting
 <li>المثال بيوضح <b><span class="lt">method overriding</span></b> (<span class="lt">dynamic polymorphism</span>) واستخدام <span class="en">super</span>، و <span class="lt">array</span> من نوع الـ <span class="lt">superclass</span>، والـ <b><span class="lt">downcasting</span></b> مع <span class="en">instanceof</span> لنداء <span class="lt">method</span> خاصة بالـ <span class="lt">subclass</span>.</li>
 <li><span class="n">تنبيه</span> الـ <span class="lt">downcast</span> على <span class="lt">object</span> مش من نوع الـ <span class="lt">subclass</span> بيرمي <span class="en">ClassCastException</span> وقت التشغيل، عشان كده بنشيك بـ <span class="en">instanceof</span> الأول.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>ملجأ حيوانات فيه كلب وقطة وحيوان مجهول. الكل جاي تحت اسم <span class="en">Animal</span>، ولما نقول <span class="en">makeSound()</span> كل واحد بيرد بصوته: الكلب <span class="en">Woof</span> والقطة <span class="en">Meow</span> والمجهول صوت عام. والكلب لوحده بيعرف <span class="en">fetch</span>، فلو عايز تخليه يجيب الكورة لازم تتأكد بـ <span class="en">instanceof</span> وتعمل <span class="en">cast</span>.</p></div>
 <div class="sp"></div>
 </div>
 <div class="sig"><span><span class="lt">eng mahmoud mohamed</span></span><small><span class="lt">Coding Create</span> · <span class="lt">Code. Create. Inspire</span>.</small></div>
@@ -1097,6 +1142,7 @@ Circle circleB = new Circle(5, 3, 10);    // numCircles = 2</pre>
 <tr><th><span class="lt">Instance variable</span></th><th><span class="lt">Static variable</span></th></tr>
 <tr><td>نسخة <span class="u">لكل <span class="lt">object</span></span> (مثل <span class="lt">x</span>, <span class="lt">y</span>, <span class="lt">r</span>)</td><td>نسخة <span class="u">لكل <span class="lt">class</span></span> (مثل <span class="lt">numCircles</span>)</td></tr>
 </table></div>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>في الشارع في لوحة عداد واحدة بتاعة الشارع كله (<span class="en">numCircles</span>) مش لكل بيت. كل ما حد يبني دايرة جديدة (<span class="en">new Circle</span>) العداد بيزيد، حتى لو لسه محدش بنى. وده الـ <span class="en">static</span>: نسخة واحدة للكلاس، وبتوصلها بـ <span class="en">ClassName.var</span>. أما <span class="en">x</span> و <span class="en">y</span> و <span class="en">r</span> فكل دايرة ليها نسختها الخاصة.</p></div>
 <h2 class="sec">Static Methods</h2>
 <ul>
 <li>بتتنادى من غير <span class="lt">object</span> (زي <span class="en">main</span>)، وغالباً بتجمع دوال مكتبة <b>مش معتمدة على <span class="lt">data members</span></b> الكلاس (زي <span class="en">Math</span>).</li>
@@ -1114,6 +1160,7 @@ Comparator.max(a, b);    // directly using ClassName (NO objects)</pre>
 <li><span class="r">مينفعش</span> تستخدم <span class="lt">non-static data member</span> أو تنادي <span class="lt">non-static method</span> <b>مباشرة</b>.</li>
 <li>الـ <span class="en">this</span> و <span class="en">super</span> <span class="r">مينفعش</span> في <span class="lt">static context</span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>آلة حاسبة عامة معلقة في الميدان (<span class="en">Math.max</span>)، أي حد يستخدمها من غير ما يعمل <span class="en">object</span>. ده <span class="en">static method</span>. بس هي مبتشوفش الحاجات الخاصة بكل بيت (<span class="en">non-static</span>) ومتعرفش تقول <span class="en">this</span> أو <span class="en">super</span>.</p></div>
 <h2 class="sec">Initialization Blocks</h2>
 <h3>Static Block (SIB)</h3>
 <ul>
@@ -1146,11 +1193,13 @@ class B2 extends A {
 <tr><td>مينفعش <span class="en">this</span></td><td>ينفع <span class="en">this</span></td></tr>
 <tr><td>بتتنفذ <span class="u">مرة واحدة بس</span> في البرنامج كله</td><td>ممكن تشتغل <span class="u">كذا مرة</span> مع كل نداء للـ <span class="lt">constructor</span></td></tr>
 </table></div>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>حفلة: قبل ما الباب يتفتح (<span class="en">class loading</span>) الـ <span class="en">static block</span> بتجهز المسرح مرة واحدة بس. وكل ضيف يدخل (<span class="en">new</span>) الـ <span class="en">IIB</span> بتديله كارت ترحيب، بعد ما الأب يتسجل (<span class="en">super()</span>) وقبل ما <span class="en">constructor</span> الابن يكمل. فالترتيب: أب، بلوك، ابن.</p></div>
 <h2 class="sec">Abstraction</h2>
 <ul>
 <li>إخفاء <b>تفاصيل التنفيذ</b> وإظهار الوظيفة بس للمستخدم، يعني نركز على <span class="u">الـ <span class="lt">object</span> بيعمل إيه</span> مش بيعمله إزاي.</li>
 <li>بتتنفذ عن طريق <b><span class="lt">Abstract classes</span></b> و <b><span class="lt">Interfaces</span></b>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>بتسوق عربية من غير ما تعرف الموتور بيشتغل إزاي. أهم حاجة إنها "تمشي"، مش "إزاي". ده الـ <span class="en">Abstraction</span>: نركز على الـ <span class="en">object</span> بيعمل إيه مش بيعمله إزاي، وبنحققه بالـ <span class="en">Abstract classes</span> والـ <span class="en">Interfaces</span>.</p></div>
 <h2 class="sec">Abstract Classes</h2>
 <ul>
 <li>بتتعرف بـ <span class="en">abstract</span>، ممكن فيها <span class="lt">abstract</span> و <span class="lt">non-abstract methods</span>، وممكن فيها <span class="lt">constructors</span> و <span class="lt">static methods</span> و <span class="lt">final method</span>.</li>
@@ -1194,6 +1243,7 @@ public class Circle extends Shape {
 <li>السؤال: <span class="en">Shape s = new Shape();</span> <span class="lt">valid</span>؟ <b><span class="lt">No</span></b>، <span class="lt">illegal</span> لأن <span class="lt">Shape abstract</span>.</li>
 <li><b><span class="lt">Summary</span>:</b> لو مش عايز الكلاس يتورث اعمله <span class="en">final</span> (للـ <span class="lt">classes</span> والـ <span class="lt">methods</span>). ولو عايزه يتورث ويتستخدم اعمله <span class="en">abstract</span> (للـ <span class="lt">classes</span> والـ <span class="lt">methods</span>)، والـ <span class="lt">subclasses</span> لازم تنفذ الـ <span class="lt">abstract methods</span> وإلا ميتعملش منها <span class="lt">objects</span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>رسمة مبهمة اسمها <span class="en">Shape</span>: كل شكل لازم يرسم نفسه (<span class="en">draw</span>) ويحسب مساحته ومحيطه، لكن محدش يقدر يعمل "شكل" عام. فأي كلاس يورث منها (زي <span class="en">Circle</span>) لازم يكمل كل الـ <span class="en">abstract methods</span> وإلا يبقى هو كمان <span class="en">abstract</span>. ومينفعش <span class="en">new</span> عليها.</p></div>
 <h2 class="sec">Interface</h2>
 <ul>
 <li>طريقة تانية لتحقيق الـ <b><span class="lt">abstraction</span></b>، ومينفعش تعمل منها <span class="lt">objects</span>، والكلاسات <b><span class="lt">implement</span></b> الـ <span class="lt">interfaces</span>.</li>
@@ -1239,6 +1289,7 @@ public class Person implements SaySomething {
 <ul>
 <li>الكلاس ممكن ينفذ <span class="lt">interface</span>-ين (<span class="en">SaySomething, DoSomething</span>) وكل واحدة فيها <span class="lt">default method</span> و<span class="lt">abstract method</span>، وممكن نعمل <span class="lt">override</span> للـ <span class="lt">default</span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>عقد وظيفة بيقول: "أي حد يشتغل هنا لازم يعرف يعمل كذا". أي كلاس يوقّع (<span class="en">implements</span>) ويلتزم يعمل <span class="en">override</span> لكل بنود العقد. وممكن يوقّع على أكتر من عقد في نفس الوقت، وده حل مشكلة الـ <span class="en">multiple inheritance</span>. والـ <span class="en">Interface</span> مفيهاش <span class="en">constructor</span> ومينفعش <span class="en">new</span> عليها.</p></div>
 <h2 class="sec">تمارين Abstract و Interface</h2>
 <ul>
 <li>تطبيق فيه <span class="en">abstract class Shape</span> بـ <span class="lt">attributes</span> عامة <span class="en">length</span> و <span class="en">width</span> و<span class="lt">method</span>ين <span class="lt">abstract</span> <span class="en">Area</span> و <span class="en">Perimeter</span>، و <span class="en">Square</span> و <span class="en">Rectangle</span> (غير <span class="lt">abstract</span>) يورثوا منه.</li>
@@ -1260,6 +1311,7 @@ public class Person implements SaySomething {
 <li><span class="en">new A(3)</span> (<span class="lt">A extends B</span>): الناتج <span class="en">B's constructor is invoked</span> ثم <span class="en">A's constructor is invoked</span>. وأيوه، الـ <span class="lt">no-arg constructor</span> بتاع <span class="en">Object</span> بيتنادى (عن طريق <span class="lt">B</span>).</li>
 <li><span class="en">new A()</span> مع <span class="en">int i=5; static int j=4;</span> و <span class="lt">B</span>() بتنادي <span class="en">m()</span> المعدلة في <span class="lt">A</span>: يطبع <span class="en">i is 0</span> و <span class="en">j is 4</span> (<span class="lt">i</span> لسه متهيأتش)، ثم بعدها <span class="en">i is 5</span> و <span class="en">j is 4</span>.</li>
 </ul>
+<div class="box story"><span class="cap">الحدوتة 📖</span><p>في ورشة تصليح: الأول بيبنوا <span class="en">Shape</span> وجواها <span class="en">Square</span> و <span class="en">Rectangle</span> بيحسبوا المساحة والمحيط. وبعدين مفتش الكود لقى أخطاء: <span class="en">radius = radius</span> لازم <span class="en">this.radius</span>، و <span class="en">Circle(radius)</span> لازم <span class="en">super(radius)</span>، و <span class="en">getArea()</span> بتنادي نفسها للأبد (<span class="en">recursion</span>) لازم <span class="en">super.getArea()</span>. ولقى كمان إن <span class="en">A</span> معندهاش <span class="en">no-arg constructor</span> فـ <span class="en">B()</span> مش هتتكمبايل.</p></div>
 <div class="sp"></div>
 </div>
 <div class="sig"><span><span class="lt">eng mahmoud mohamed</span></span><small><span class="lt">Coding Create</span> · <span class="lt">Code. Create. Inspire</span>.</small></div>
